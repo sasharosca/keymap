@@ -7,26 +7,23 @@
   "unlisted": true,
   "date": 1787014554,
   "creator": "srosca93",
-  "title": "Sasha Callum thumbs",
-  "notes": "Factory envelope + Callum-style thumbs. No hold-tap / home-row mods.\nThumbs always mean the same thing (not remapped per layer).\n1 Cursor, 2 ModsL, 3 ModsR, 4 Space.\nModsL+ModsR => Symbol, Cursor+ModsR => Number (conditional layers).\nMagic copied from factory; Factory-test &to 3 on RH C6R6 removed.",
+  "title": "Sasha's 34 keys (no HRM / no hold-taps)",
+  "notes": "",
   "tags": [
     "qwerty",
-    "callum",
     "no-hrm",
     "programming",
     "vim"
   ],
-  "custom_defined_behaviors": "conditional_layers {\n    compatible = \"zmk,conditional-layers\";\n    symbol {\n        if-layers = <LAYER_ModsL LAYER_ModsR>;\n        then-layer = <LAYER_Symbol>;\n    };\n    number {\n        if-layers = <LAYER_Cursor LAYER_ModsR>;\n        then-layer = <LAYER_Number>;\n    };\n};\n",
+  "custom_defined_behaviors": "",
   "custom_devicetree": "",
   "config_parameters": [],
   "layout_parameters": {},
   "layer_names": [
     "QWERTY",
-    "ModsL",
-    "ModsR",
-    "Cursor",
-    "Symbol",
-    "Number",
+    "Mods",
+    "Nav",
+    "Num",
     "Magic"
   ],
   "layers": [
@@ -313,30 +310,10 @@
         ]
       },
       {
-        "value": "&mo",
-        "params": [
-          {
-            "value": 3
-          }
-        ],
-        "decoration": {
-          "label": "Cursor",
-          "description": "Hold for arrows and editing keys.",
-          "background": "#c8e6c9ff"
-        }
+        "value": "&none"
       },
       {
-        "value": "&mo",
-        "params": [
-          {
-            "value": 1
-          }
-        ],
-        "decoration": {
-          "label": "Mods L",
-          "description": "Hold for left-hand modifiers.",
-          "background": "#bbdefbff"
-        }
+        "value": "&none"
       },
       {
         "value": "&none"
@@ -345,25 +322,10 @@
         "value": "&none"
       },
       {
-        "value": "&mo",
-        "params": [
-          {
-            "value": 2
-          }
-        ],
-        "decoration": {
-          "label": "Mods R",
-          "description": "Hold for right-hand modifiers.",
-          "background": "#bbdefbff"
-        }
+        "value": "&none"
       },
       {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "SPACE"
-          }
-        ]
+        "value": "&none"
       },
       {
         "value": "&kp",
@@ -427,12 +389,12 @@
         "value": "&mo",
         "params": [
           {
-            "value": 3
+            "value": 2
           }
         ],
         "decoration": {
-          "label": "Cursor",
-          "description": "Hold for arrows and editing keys.",
+          "label": "Nav",
+          "description": "Hold for numbers, arrows and editing keys.",
           "background": "#c8e6c9ff"
         }
       },
@@ -444,8 +406,8 @@
           }
         ],
         "decoration": {
-          "label": "Mods L",
-          "description": "Hold for left-hand modifiers.",
+          "label": "Mods",
+          "description": "Hold for modifiers and F-keys.",
           "background": "#bbdefbff"
         }
       },
@@ -459,13 +421,13 @@
         "value": "&mo",
         "params": [
           {
-            "value": 2
+            "value": 3
           }
         ],
         "decoration": {
-          "label": "Mods R",
-          "description": "Hold for right-hand modifiers.",
-          "background": "#bbdefbff"
+          "label": "Num",
+          "description": "Hold for numpad and symbols.",
+          "background": "#ffe0b2ff"
         }
       },
       {
@@ -606,7 +568,7 @@
         "value": "&kp",
         "params": [
           {
-            "value": "Y"
+            "value": "F6"
           }
         ]
       },
@@ -614,7 +576,7 @@
         "value": "&kp",
         "params": [
           {
-            "value": "U"
+            "value": "F7"
           }
         ]
       },
@@ -622,7 +584,7 @@
         "value": "&kp",
         "params": [
           {
-            "value": "I"
+            "value": "F8"
           }
         ]
       },
@@ -630,7 +592,7 @@
         "value": "&kp",
         "params": [
           {
-            "value": "O"
+            "value": "F9"
           }
         ]
       },
@@ -638,7 +600,7 @@
         "value": "&kp",
         "params": [
           {
-            "value": "P"
+            "value": "F10"
           }
         ]
       },
@@ -692,468 +654,6 @@
         "value": "&kp",
         "params": [
           {
-            "value": "H"
-          }
-        ]
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "J"
-          }
-        ]
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "K"
-          }
-        ]
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "L"
-          }
-        ]
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "SEMI"
-          }
-        ]
-      },
-      {
-        "value": "&none"
-      },
-      {
-        "value": "&none"
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "Z"
-          }
-        ]
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "X"
-          }
-        ]
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "C"
-          }
-        ]
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "V"
-          }
-        ]
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "B"
-          }
-        ]
-      },
-      {
-        "value": "&mo",
-        "params": [
-          {
-            "value": 3
-          }
-        ],
-        "decoration": {
-          "label": "Cursor",
-          "description": "Hold for arrows and editing keys.",
-          "background": "#c8e6c9ff"
-        }
-      },
-      {
-        "value": "&mo",
-        "params": [
-          {
-            "value": 1
-          }
-        ],
-        "decoration": {
-          "label": "Mods L",
-          "description": "Hold for left-hand modifiers.",
-          "background": "#bbdefbff"
-        }
-      },
-      {
-        "value": "&none"
-      },
-      {
-        "value": "&none"
-      },
-      {
-        "value": "&mo",
-        "params": [
-          {
-            "value": 2
-          }
-        ],
-        "decoration": {
-          "label": "Mods R",
-          "description": "Hold for right-hand modifiers.",
-          "background": "#bbdefbff"
-        }
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "SPACE"
-          }
-        ]
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "N"
-          }
-        ]
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "M"
-          }
-        ]
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "COMMA"
-          }
-        ]
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "DOT"
-          }
-        ]
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "FSLH"
-          }
-        ]
-      },
-      {
-        "value": "&none"
-      },
-      {
-        "value": "&magic"
-      },
-      {
-        "value": "&none"
-      },
-      {
-        "value": "&none"
-      },
-      {
-        "value": "&none"
-      },
-      {
-        "value": "&none"
-      },
-      {
-        "value": "&mo",
-        "params": [
-          {
-            "value": 3
-          }
-        ],
-        "decoration": {
-          "label": "Cursor",
-          "description": "Hold for arrows and editing keys.",
-          "background": "#c8e6c9ff"
-        }
-      },
-      {
-        "value": "&mo",
-        "params": [
-          {
-            "value": 1
-          }
-        ],
-        "decoration": {
-          "label": "Mods L",
-          "description": "Hold for left-hand modifiers.",
-          "background": "#bbdefbff"
-        }
-      },
-      {
-        "value": "&none"
-      },
-      {
-        "value": "&none"
-      },
-      {
-        "value": "&mo",
-        "params": [
-          {
-            "value": 2
-          }
-        ],
-        "decoration": {
-          "label": "Mods R",
-          "description": "Hold for right-hand modifiers.",
-          "background": "#bbdefbff"
-        }
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "SPACE"
-          }
-        ]
-      },
-      {
-        "value": "&none"
-      },
-      {
-        "value": "&none"
-      },
-      {
-        "value": "&none"
-      },
-      {
-        "value": "&none"
-      },
-      {
-        "value": "&magic"
-      }
-    ],
-    [
-      {
-        "value": "&none"
-      },
-      {
-        "value": "&none"
-      },
-      {
-        "value": "&none"
-      },
-      {
-        "value": "&none"
-      },
-      {
-        "value": "&none"
-      },
-      {
-        "value": "&none"
-      },
-      {
-        "value": "&none"
-      },
-      {
-        "value": "&none"
-      },
-      {
-        "value": "&none"
-      },
-      {
-        "value": "&none"
-      },
-      {
-        "value": "&none"
-      },
-      {
-        "value": "&none"
-      },
-      {
-        "value": "&none"
-      },
-      {
-        "value": "&none"
-      },
-      {
-        "value": "&none"
-      },
-      {
-        "value": "&none"
-      },
-      {
-        "value": "&none"
-      },
-      {
-        "value": "&none"
-      },
-      {
-        "value": "&none"
-      },
-      {
-        "value": "&none"
-      },
-      {
-        "value": "&none"
-      },
-      {
-        "value": "&none"
-      },
-      {
-        "value": "&none"
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "Q"
-          }
-        ]
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "W"
-          }
-        ]
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "E"
-          }
-        ]
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "R"
-          }
-        ]
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "T"
-          }
-        ]
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "F6"
-          }
-        ]
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "F7"
-          }
-        ]
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "F8"
-          }
-        ]
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "F9"
-          }
-        ]
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "F10"
-          }
-        ]
-      },
-      {
-        "value": "&none"
-      },
-      {
-        "value": "&none"
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "A"
-          }
-        ]
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "S"
-          }
-        ]
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "D"
-          }
-        ]
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "F"
-          }
-        ]
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "G"
-          }
-        ]
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
             "value": "F12"
           }
         ]
@@ -1162,7 +662,7 @@
         "value": "&kp",
         "params": [
           {
-            "value": "LSHFT"
+            "value": "RSHFT"
           }
         ]
       },
@@ -1170,7 +670,7 @@
         "value": "&kp",
         "params": [
           {
-            "value": "LCTRL"
+            "value": "RCTRL"
           }
         ]
       },
@@ -1178,7 +678,7 @@
         "value": "&kp",
         "params": [
           {
-            "value": "LALT"
+            "value": "RALT"
           }
         ]
       },
@@ -1186,9 +686,45 @@
         "value": "&kp",
         "params": [
           {
-            "value": "LGUI"
+            "value": "RGUI"
           }
         ]
+      },
+      {
+        "value": "&none"
+      },
+      {
+        "value": "&none"
+      },
+      {
+        "value": "&none"
+      },
+      {
+        "value": "&none"
+      },
+      {
+        "value": "&none"
+      },
+      {
+        "value": "&caps_word"
+      },
+      {
+        "value": "&none"
+      },
+      {
+        "value": "&none"
+      },
+      {
+        "value": "&none"
+      },
+      {
+        "value": "&none"
+      },
+      {
+        "value": "&none"
+      },
+      {
+        "value": "&none"
       },
       {
         "value": "&none"
@@ -1200,7 +736,7 @@
         "value": "&kp",
         "params": [
           {
-            "value": "Z"
+            "value": "C_PREV"
           }
         ]
       },
@@ -1208,7 +744,7 @@
         "value": "&kp",
         "params": [
           {
-            "value": "X"
+            "value": "C_PP"
           }
         ]
       },
@@ -1216,7 +752,7 @@
         "value": "&kp",
         "params": [
           {
-            "value": "C"
+            "value": "C_NEXT"
           }
         ]
       },
@@ -1224,108 +760,7 @@
         "value": "&kp",
         "params": [
           {
-            "value": "V"
-          }
-        ]
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "B"
-          }
-        ]
-      },
-      {
-        "value": "&mo",
-        "params": [
-          {
-            "value": 3
-          }
-        ],
-        "decoration": {
-          "label": "Cursor",
-          "description": "Hold for arrows and editing keys.",
-          "background": "#c8e6c9ff"
-        }
-      },
-      {
-        "value": "&mo",
-        "params": [
-          {
-            "value": 1
-          }
-        ],
-        "decoration": {
-          "label": "Mods L",
-          "description": "Hold for left-hand modifiers.",
-          "background": "#bbdefbff"
-        }
-      },
-      {
-        "value": "&none"
-      },
-      {
-        "value": "&none"
-      },
-      {
-        "value": "&mo",
-        "params": [
-          {
-            "value": 2
-          }
-        ],
-        "decoration": {
-          "label": "Mods R",
-          "description": "Hold for right-hand modifiers.",
-          "background": "#bbdefbff"
-        }
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "SPACE"
-          }
-        ]
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "N"
-          }
-        ]
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "M"
-          }
-        ]
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "COMMA"
-          }
-        ]
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "DOT"
-          }
-        ]
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "FSLH"
+            "value": "PSCRN"
           }
         ]
       },
@@ -1351,12 +786,12 @@
         "value": "&mo",
         "params": [
           {
-            "value": 3
+            "value": 2
           }
         ],
         "decoration": {
-          "label": "Cursor",
-          "description": "Hold for arrows and editing keys.",
+          "label": "Nav",
+          "description": "Hold for numbers, arrows and editing keys.",
           "background": "#c8e6c9ff"
         }
       },
@@ -1368,8 +803,8 @@
           }
         ],
         "decoration": {
-          "label": "Mods L",
-          "description": "Hold for left-hand modifiers.",
+          "label": "Mods",
+          "description": "Hold for modifiers and F-keys.",
           "background": "#bbdefbff"
         }
       },
@@ -1383,13 +818,13 @@
         "value": "&mo",
         "params": [
           {
-            "value": 2
+            "value": 3
           }
         ],
         "decoration": {
-          "label": "Mods R",
-          "description": "Hold for right-hand modifiers.",
-          "background": "#bbdefbff"
+          "label": "Num",
+          "description": "Hold for numpad and symbols.",
+          "background": "#ffe0b2ff"
         }
       },
       {
@@ -1495,22 +930,10 @@
         ]
       },
       {
-        "value": "&none"
-      },
-      {
-        "value": "&none"
-      },
-      {
-        "value": "&none"
-      },
-      {
-        "value": "&none"
-      },
-      {
         "value": "&kp",
         "params": [
           {
-            "value": "PG_UP"
+            "value": "LBKT"
           }
         ]
       },
@@ -1518,7 +941,15 @@
         "value": "&kp",
         "params": [
           {
-            "value": "HOME"
+            "value": "LBRC"
+          }
+        ]
+      },
+      {
+        "value": "&kp",
+        "params": [
+          {
+            "value": "LPAR"
           }
         ]
       },
@@ -1529,7 +960,44 @@
         "value": "&kp",
         "params": [
           {
-            "value": "END"
+            "value": "LC",
+            "params": [
+              {
+                "value": "LS",
+                "params": [
+                  {
+                    "value": "Z"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "decoration": {
+          "label": "Redo"
+        }
+      },
+      {
+        "value": "&kp",
+        "params": [
+          {
+            "value": "RPAR"
+          }
+        ]
+      },
+      {
+        "value": "&kp",
+        "params": [
+          {
+            "value": "RBRC"
+          }
+        ]
+      },
+      {
+        "value": "&kp",
+        "params": [
+          {
+            "value": "RBKT"
           }
         ]
       },
@@ -1548,19 +1016,44 @@
         "value": "&none"
       },
       {
-        "value": "&none"
+        "value": "&kp",
+        "params": [
+          {
+            "value": "ESC"
+          }
+        ]
       },
       {
-        "value": "&none"
+        "value": "&kp",
+        "params": [
+          {
+            "value": "HOME"
+          }
+        ]
       },
       {
-        "value": "&none"
+        "value": "&kp",
+        "params": [
+          {
+            "value": "PG_DN"
+          }
+        ]
       },
       {
-        "value": "&none"
+        "value": "&kp",
+        "params": [
+          {
+            "value": "PG_UP"
+          }
+        ]
       },
       {
-        "value": "&none"
+        "value": "&kp",
+        "params": [
+          {
+            "value": "END"
+          }
+        ]
       },
       {
         "value": "&kp",
@@ -1609,376 +1102,68 @@
         "value": "&none"
       },
       {
-        "value": "&none"
-      },
-      {
-        "value": "&none"
-      },
-      {
-        "value": "&none"
-      },
-      {
-        "value": "&none"
-      },
-      {
-        "value": "&none"
-      },
-      {
-        "value": "&mo",
+        "value": "&kp",
         "params": [
           {
-            "value": 3
+            "value": "LC",
+            "params": [
+              {
+                "value": "Z"
+              }
+            ]
           }
         ],
         "decoration": {
-          "label": "Cursor",
-          "description": "Hold for arrows and editing keys.",
-          "background": "#c8e6c9ff"
-        }
-      },
-      {
-        "value": "&mo",
-        "params": [
-          {
-            "value": 1
-          }
-        ],
-        "decoration": {
-          "label": "Mods L",
-          "description": "Hold for left-hand modifiers.",
-          "background": "#bbdefbff"
-        }
-      },
-      {
-        "value": "&none"
-      },
-      {
-        "value": "&none"
-      },
-      {
-        "value": "&mo",
-        "params": [
-          {
-            "value": 2
-          }
-        ],
-        "decoration": {
-          "label": "Mods R",
-          "description": "Hold for right-hand modifiers.",
-          "background": "#bbdefbff"
+          "label": "Undo"
         }
       },
       {
         "value": "&kp",
         "params": [
           {
-            "value": "SPACE"
-          }
-        ]
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "PG_DN"
-          }
-        ]
-      },
-      {
-        "value": "&none"
-      },
-      {
-        "value": "&none"
-      },
-      {
-        "value": "&none"
-      },
-      {
-        "value": "&none"
-      },
-      {
-        "value": "&none"
-      },
-      {
-        "value": "&magic"
-      },
-      {
-        "value": "&none"
-      },
-      {
-        "value": "&none"
-      },
-      {
-        "value": "&none"
-      },
-      {
-        "value": "&none"
-      },
-      {
-        "value": "&mo",
-        "params": [
-          {
-            "value": 3
+            "value": "LC",
+            "params": [
+              {
+                "value": "X"
+              }
+            ]
           }
         ],
         "decoration": {
-          "label": "Cursor",
-          "description": "Hold for arrows and editing keys.",
-          "background": "#c8e6c9ff"
-        }
-      },
-      {
-        "value": "&mo",
-        "params": [
-          {
-            "value": 1
-          }
-        ],
-        "decoration": {
-          "label": "Mods L",
-          "description": "Hold for left-hand modifiers.",
-          "background": "#bbdefbff"
-        }
-      },
-      {
-        "value": "&none"
-      },
-      {
-        "value": "&none"
-      },
-      {
-        "value": "&mo",
-        "params": [
-          {
-            "value": 2
-          }
-        ],
-        "decoration": {
-          "label": "Mods R",
-          "description": "Hold for right-hand modifiers.",
-          "background": "#bbdefbff"
+          "label": "Cut"
         }
       },
       {
         "value": "&kp",
         "params": [
           {
-            "value": "SPACE"
+            "value": "LC",
+            "params": [
+              {
+                "value": "C"
+              }
+            ]
           }
-        ]
-      },
-      {
-        "value": "&none"
-      },
-      {
-        "value": "&none"
-      },
-      {
-        "value": "&none"
-      },
-      {
-        "value": "&none"
-      },
-      {
-        "value": "&magic"
-      }
-    ],
-    [
-      {
-        "value": "&none"
-      },
-      {
-        "value": "&none"
-      },
-      {
-        "value": "&none"
-      },
-      {
-        "value": "&none"
-      },
-      {
-        "value": "&none"
-      },
-      {
-        "value": "&none"
-      },
-      {
-        "value": "&none"
-      },
-      {
-        "value": "&none"
-      },
-      {
-        "value": "&none"
-      },
-      {
-        "value": "&none"
-      },
-      {
-        "value": "&none"
-      },
-      {
-        "value": "&none"
-      },
-      {
-        "value": "&none"
-      },
-      {
-        "value": "&none"
-      },
-      {
-        "value": "&none"
-      },
-      {
-        "value": "&none"
-      },
-      {
-        "value": "&none"
-      },
-      {
-        "value": "&none"
-      },
-      {
-        "value": "&none"
-      },
-      {
-        "value": "&none"
-      },
-      {
-        "value": "&none"
-      },
-      {
-        "value": "&none"
-      },
-      {
-        "value": "&none"
-      },
-      {
-        "value": "&none"
+        ],
+        "decoration": {
+          "label": "Copy"
+        }
       },
       {
         "value": "&kp",
         "params": [
           {
-            "value": "LBKT"
+            "value": "LC",
+            "params": [
+              {
+                "value": "V"
+              }
+            ]
           }
-        ]
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "LBRC"
-          }
-        ]
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "LPAR"
-          }
-        ]
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "EXCL"
-          }
-        ]
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "DQT"
-          }
-        ]
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "RPAR"
-          }
-        ]
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "RBRC"
-          }
-        ]
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "RBKT"
-          }
-        ]
-      },
-      {
-        "value": "&none"
-      },
-      {
-        "value": "&none"
-      },
-      {
-        "value": "&none"
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "CARET"
-          }
-        ]
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "EQUAL"
-          }
-        ]
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "GRAVE"
-          }
-        ]
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "DLLR"
-          }
-        ]
-      },
-      {
-        "value": "&none"
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "SQT"
-          }
-        ]
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "ESC"
-          }
-        ]
+        ],
+        "decoration": {
+          "label": "Paste"
+        }
       },
       {
         "value": "&kp",
@@ -2001,92 +1186,10 @@
         "value": "&none"
       },
       {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "PIPE"
-          }
-        ]
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "HASH"
-          }
-        ]
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "AMPS"
-          }
-        ]
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "BSLH"
-          }
-        ]
-      },
-      {
-        "value": "&none"
-      },
-      {
-        "value": "&mo",
-        "params": [
-          {
-            "value": 3
-          }
-        ],
-        "decoration": {
-          "label": "Cursor",
-          "description": "Hold for arrows and editing keys.",
-          "background": "#c8e6c9ff"
-        }
-      },
-      {
-        "value": "&mo",
-        "params": [
-          {
-            "value": 1
-          }
-        ],
-        "decoration": {
-          "label": "Mods L",
-          "description": "Hold for left-hand modifiers.",
-          "background": "#bbdefbff"
-        }
-      },
-      {
         "value": "&none"
       },
       {
         "value": "&none"
-      },
-      {
-        "value": "&mo",
-        "params": [
-          {
-            "value": 2
-          }
-        ],
-        "decoration": {
-          "label": "Mods R",
-          "description": "Hold for right-hand modifiers.",
-          "background": "#bbdefbff"
-        }
-      },
-      {
-        "value": "&kp",
-        "params": [
-          {
-            "value": "SPACE"
-          }
-        ]
       },
       {
         "value": "&kp",
@@ -2105,13 +1208,28 @@
         ]
       },
       {
-        "value": "&none"
+        "value": "&kp",
+        "params": [
+          {
+            "value": "LT"
+          }
+        ]
       },
       {
-        "value": "&none"
+        "value": "&kp",
+        "params": [
+          {
+            "value": "GT"
+          }
+        ]
       },
       {
-        "value": "&none"
+        "value": "&kp",
+        "params": [
+          {
+            "value": "QMARK"
+          }
+        ]
       },
       {
         "value": "&none"
@@ -2135,12 +1253,12 @@
         "value": "&mo",
         "params": [
           {
-            "value": 3
+            "value": 2
           }
         ],
         "decoration": {
-          "label": "Cursor",
-          "description": "Hold for arrows and editing keys.",
+          "label": "Nav",
+          "description": "Hold for numbers, arrows and editing keys.",
           "background": "#c8e6c9ff"
         }
       },
@@ -2152,8 +1270,8 @@
           }
         ],
         "decoration": {
-          "label": "Mods L",
-          "description": "Hold for left-hand modifiers.",
+          "label": "Mods",
+          "description": "Hold for modifiers and F-keys.",
           "background": "#bbdefbff"
         }
       },
@@ -2167,13 +1285,13 @@
         "value": "&mo",
         "params": [
           {
-            "value": 2
+            "value": 3
           }
         ],
         "decoration": {
-          "label": "Mods R",
-          "description": "Hold for right-hand modifiers.",
-          "background": "#bbdefbff"
+          "label": "Num",
+          "description": "Hold for numpad and symbols.",
+          "background": "#ffe0b2ff"
         }
       },
       {
@@ -2277,13 +1395,28 @@
         "value": "&none"
       },
       {
-        "value": "&none"
+        "value": "&kp",
+        "params": [
+          {
+            "value": "DQT"
+          }
+        ]
       },
       {
-        "value": "&none"
+        "value": "&kp",
+        "params": [
+          {
+            "value": "SQT"
+          }
+        ]
       },
       {
-        "value": "&none"
+        "value": "&kp",
+        "params": [
+          {
+            "value": "EXCL"
+          }
+        ]
       },
       {
         "value": "&kp",
@@ -2332,19 +1465,44 @@
         "value": "&none"
       },
       {
-        "value": "&none"
+        "value": "&kp",
+        "params": [
+          {
+            "value": "CARET"
+          }
+        ]
       },
       {
-        "value": "&none"
+        "value": "&kp",
+        "params": [
+          {
+            "value": "EQUAL"
+          }
+        ]
       },
       {
-        "value": "&none"
+        "value": "&kp",
+        "params": [
+          {
+            "value": "GRAVE"
+          }
+        ]
       },
       {
-        "value": "&none"
+        "value": "&kp",
+        "params": [
+          {
+            "value": "DLLR"
+          }
+        ]
       },
       {
-        "value": "&none"
+        "value": "&kp",
+        "params": [
+          {
+            "value": "STAR"
+          }
+        ]
       },
       {
         "value": "&kp",
@@ -2393,72 +1551,57 @@
         "value": "&none"
       },
       {
-        "value": "&none"
-      },
-      {
-        "value": "&none"
-      },
-      {
-        "value": "&none"
-      },
-      {
-        "value": "&none"
-      },
-      {
-        "value": "&none"
-      },
-      {
-        "value": "&mo",
+        "value": "&kp",
         "params": [
           {
-            "value": 3
+            "value": "PIPE"
           }
-        ],
-        "decoration": {
-          "label": "Cursor",
-          "description": "Hold for arrows and editing keys.",
-          "background": "#c8e6c9ff"
-        }
-      },
-      {
-        "value": "&mo",
-        "params": [
-          {
-            "value": 1
-          }
-        ],
-        "decoration": {
-          "label": "Mods L",
-          "description": "Hold for left-hand modifiers.",
-          "background": "#bbdefbff"
-        }
-      },
-      {
-        "value": "&none"
-      },
-      {
-        "value": "&none"
-      },
-      {
-        "value": "&mo",
-        "params": [
-          {
-            "value": 2
-          }
-        ],
-        "decoration": {
-          "label": "Mods R",
-          "description": "Hold for right-hand modifiers.",
-          "background": "#bbdefbff"
-        }
+        ]
       },
       {
         "value": "&kp",
         "params": [
           {
-            "value": "SPACE"
+            "value": "HASH"
           }
         ]
+      },
+      {
+        "value": "&kp",
+        "params": [
+          {
+            "value": "AMPS"
+          }
+        ]
+      },
+      {
+        "value": "&kp",
+        "params": [
+          {
+            "value": "BSLH"
+          }
+        ]
+      },
+      {
+        "value": "&none"
+      },
+      {
+        "value": "&none"
+      },
+      {
+        "value": "&none"
+      },
+      {
+        "value": "&none"
+      },
+      {
+        "value": "&none"
+      },
+      {
+        "value": "&none"
+      },
+      {
+        "value": "&none"
       },
       {
         "value": "&kp",
@@ -2493,7 +1636,12 @@
         ]
       },
       {
-        "value": "&none"
+        "value": "&kp",
+        "params": [
+          {
+            "value": "UNDER"
+          }
+        ]
       },
       {
         "value": "&none"
@@ -2517,12 +1665,12 @@
         "value": "&mo",
         "params": [
           {
-            "value": 3
+            "value": 2
           }
         ],
         "decoration": {
-          "label": "Cursor",
-          "description": "Hold for arrows and editing keys.",
+          "label": "Nav",
+          "description": "Hold for numbers, arrows and editing keys.",
           "background": "#c8e6c9ff"
         }
       },
@@ -2534,8 +1682,8 @@
           }
         ],
         "decoration": {
-          "label": "Mods L",
-          "description": "Hold for left-hand modifiers.",
+          "label": "Mods",
+          "description": "Hold for modifiers and F-keys.",
           "background": "#bbdefbff"
         }
       },
@@ -2549,13 +1697,13 @@
         "value": "&mo",
         "params": [
           {
-            "value": 2
+            "value": 3
           }
         ],
         "decoration": {
-          "label": "Mods R",
-          "description": "Hold for right-hand modifiers.",
-          "background": "#bbdefbff"
+          "label": "Num",
+          "description": "Hold for numpad and symbols.",
+          "background": "#ffe0b2ff"
         }
       },
       {
